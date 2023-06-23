@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  resources :registers
+
   resources :courses
-  resources :students, only: [:index]
+  resources :students, only: [:index] do
+    resources :registers, only: [:index, :create]
+  end
 
   # Students
   post '/signup', to: 'students#create'
