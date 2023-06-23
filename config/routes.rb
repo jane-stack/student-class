@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   # Sessions
   post '/login', to: 'sessions#create'
-  delete '/signout', to: 'sessions#destroy'
+  delete '/logout', to: 'sessions#destroy'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

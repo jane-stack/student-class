@@ -7,7 +7,7 @@ class StudentsController < ApplicationController
 
     # POST /signup
     def create
-        student = Student.new(user_params)
+        student = Student.new(student_params)
         if student.save
             session[:student_id] = student.id
             render json: student, status: 201
@@ -23,7 +23,7 @@ class StudentsController < ApplicationController
 
     private
 
-    def user_params
+    def student_params
         params.permit(:first_name, :last_name, :email, :password)
     end
 end
