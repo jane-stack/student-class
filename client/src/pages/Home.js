@@ -7,9 +7,9 @@ function Home() {
     return (
         <div>
             <h1 className="App">Welcome { students.username }!</h1>
-            <h5>You are visiting Tuyen's phase four ChatSpace project.</h5>
+            <h5>You are visiting Tuyen's phase four StudentAccount project</h5>
             <div className="home-page">
-            <h2>What is ChatSpace?</h2>
+            <h2>What is StudentAccount?</h2>
             <p>
                 This is a chat forum where users can post any questions or topic they want, seeking help or answers. As a user, you can post your topic of discussion and you can reply to another user's topic.
             </p>

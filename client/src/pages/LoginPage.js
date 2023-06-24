@@ -11,14 +11,14 @@ function LoginPage() {
             {showLogin ? (
                 <>
                 <LoginForm />
-                <p className='words'>Join ChatSpace? &nbsp;
+                <p className='words'>Create an Account &nbsp;
                     <button onClick={() => setShowLogin(false)}>Signup</button>
                 </p>
                 </>
             ):(
                 <>
                 <SignupForm />
-                <p className='words'>Already a member? &nbsp;
+                <p className='words'>Log in to your Student Account &nbsp;
                     <button onClick={() => setShowLogin(true)}>Login</button>
                 </p>
                 </>
