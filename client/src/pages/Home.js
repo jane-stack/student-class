@@ -6,7 +6,7 @@ function Home() {
 
     return (
         <div>
-            <h1 className="App">Welcome { user.username }!</h1>
+            <h1 className="App">Welcome { students.username }!</h1>
             <h5>You are visiting Tuyen's phase four ChatSpace project.</h5>
             <div className="home-page">
             <h2>What is ChatSpace?</h2>
