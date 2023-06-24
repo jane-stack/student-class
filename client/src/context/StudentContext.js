@@ -1,10 +1,11 @@
 import { createContext, useEffect, useState } from "react";
 
 const StudentContext = createContext({});
+
 const StudentProvider = ({ children }) => {
-    const [students, setStudents] = useState([]);
-    const [loggedIn, setLoggedIn] = useState(false);
-    const [currentUser, setCurrentUser] = useState(null);
+    const [ students, setStudents ] = useState([]);
+    const [ loggedIn, setLoggedIn ] = useState(false);
+    const [ currentUser, setCurrentUser ] = useState(null);
 
     useEffect(() => {
         fetch('/user')
