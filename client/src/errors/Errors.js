@@ -7,7 +7,7 @@ function Errors() {
     const errorList = errors.map((error, idx) => <p key={idx}>{ error }</p>)
 
     return (
-        <div>{ errorList }</div>
+        <div className="errors">{ errorList }</div>
     )
 }
 
