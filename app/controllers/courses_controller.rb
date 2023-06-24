@@ -13,7 +13,11 @@ class CoursesController < ApplicationController
 
     def create
         course = Course.create(course_params)
-        render json: course, status: 201 # created
+        if course.valid?
+            render json: course, status: 201 # created
+        else
+            render json: { errors: @corse.errors.full_messages }, status: :unprocessable_entity
+        end
     end
 
     def update
