@@ -37,6 +37,15 @@ code {
   color: white;
 }
 
+/* handles each card */
+.card-div {
+  background-color: #434343;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  color: white;
+}
+
 .words {
   color: white;
 }
