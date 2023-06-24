@@ -6,24 +6,8 @@ function Home() {
 
     return (
         <div>
-            <h1 className="App">Welcome { students.username }!</h1>
+            <h1 className="App">Welcome { students.first_name }!</h1>
             <h5>You are visiting Tuyen's phase four StudentAccount project</h5>
-            <div className="home-page">
-            <h2>What is StudentAccount?</h2>
-            <p>
-                This is a chat forum where users can post any questions or topic they want, seeking help or answers. As a user, you can post your topic of discussion and you can reply to another user's topic.
-            </p>
-            <p>
-            You will need to signup for an account with ChatSpace in order to access the contents. As you enter the page, a login box will appear. You can toggle between login and signup as necessary. Once logged in, you will be redirected to the homepage (this page). At the Navbar, you'll see Home, Topic, Create Topic, and Logout links. 
-            </p>
-            <p>
-            Click on Topic and you'll be redirected to a list of all active topics. Click on the title to be redirected to the chat space for that topic. 
-            </p>
-            <p>
-            Click on Create Topic to post a topic of your choice. Once a topic has been published, as the creator of the topic, you have the option to edit or delete your topic. The edit and delete buttons will only appear to the topic creator. No other users will see the edit and delete button on your post.
-            </p>
-            </div>
-            <br/>
             <div className="home-page">
             <h2>Requirements:</h2>
             <p>Ruby Version 2.7.4</p>

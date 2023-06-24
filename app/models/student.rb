@@ -4,7 +4,6 @@ class Student < ApplicationRecord
     has_many :registers
     has_many :courses, through: :registers
 
-    validates :first_name, :last_name, presence: true
     validates :email, uniqueness: true, presence: true
     validates :password, length: { minimum: 8 }
 
