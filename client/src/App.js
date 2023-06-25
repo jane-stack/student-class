@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
@@ -6,6 +7,7 @@ import Home from './pages/Home';
 import CourseList from './pages/CourseList';
 
 function App() {
+
   return (
     <BrowserRouter>
     <Navbar />

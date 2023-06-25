@@ -2,8 +2,11 @@ function CourseCard({ course }) {
 
     return (
         <div className="card-div">
+            <ul>
             <p>{ course.name }</p>
-            <p>{ course.teacher }</p>
+            <p className="teacher-text">{ course.teacher }</p>
+            <button>Register</button>
+            </ul>
         </div>
     )
 }
