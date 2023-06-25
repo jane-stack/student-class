@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
 
-  resources :students do
-    resources :registers, only: [:create]
-  end
-  resources :courses do
-    resources :registers, only: [:create]
-  end
-  resources :registers, only: [:destroy]
+  # resources :students do
+  #   resources :registers, only: [:create]
+  # end
+  # resources :courses do
+  #   resources :registers, only: [:create]
+  # end
+  # resources :registers, only: [:destroy]
+
+  resources :students, only: [:index, :show]
+  resources :courses, only: [:index, :create, :destroy]
+  resources :registers, only: [:create]
 
   # Students
   post '/signup', to: 'students#create'

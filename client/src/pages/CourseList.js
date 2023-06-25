@@ -10,12 +10,17 @@ function CourseList() {
         .then(courses => setCourses(courses))
     }, [])
 
+    const onAddCourse = newCourse => {
+        setCourses(courses => [...courses, newCourse])
+    }
+
     // rendering all courses
     const renderCourse = courses.map(course => {
         return (
             <CourseCard 
                 key={ course.id }
                 course={ course }
+                onAddCourse={onAddCourse}
             />
         )
     })

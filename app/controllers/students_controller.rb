@@ -8,7 +8,7 @@ class StudentsController < ApplicationController
 
     # get /students/:id - show indivisual students
     def show
-        render json: @student
+        render json: @student, serializer: StudentWithCoursesSerializer
     end
 
     # patch /students/:id

@@ -1,4 +1,8 @@
-function CourseCard({ course }) {
+function CourseCard({ course, onAddCourse }) {
+
+    // const onRegister = () => {
+    //     onAddCourse(course.id)
+    // }
 
     return (
         <div className="card-div">
