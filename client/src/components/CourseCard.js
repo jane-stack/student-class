@@ -1,4 +1,4 @@
-function CourseCard({ course, onAddCourse }) {
+function CourseCard({ course }) {
 
     // const onRegister = () => {
     //     onAddCourse(course.id)

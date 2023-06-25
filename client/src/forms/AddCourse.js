@@ -1,9 +1,10 @@
-// function AddCourse() {
+function AddCourse() {
+    const [  ]
 
-//     return (
-//         <form>
-//         </form>
-//     )
-// }
+    return (
+        <form>
+        </form>
+    )
+}
 
-// export default AddCourse;
+export default AddCourse;

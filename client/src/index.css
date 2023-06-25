@@ -39,11 +39,9 @@ code {
 
 /* handles each card */
 .card-div {
-  background-color: #434343;
-  padding: 1rem;
-  margin: 0.5rem;
-  border-radius: 0.5rem;
-  color: white;
+  line-height: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .words {
@@ -84,12 +82,20 @@ code {
   color: black;
 }
 
-/* handles making teacher name appears smaller */
-.teacher-text {
-  font-size: x-small;
-}
-
 .course {
   display: flex;
   align-items: center;
+}
+
+table {
+  width: 500px;
+  height: 200px;
+}
+
+th {
+  border: 1px solid white;
+}
+
+td {
+  text-align: center;
 }

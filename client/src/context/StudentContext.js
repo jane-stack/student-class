@@ -19,11 +19,11 @@ const StudentProvider = ({ children }) => {
         })
     }, [])
 
-    useEffect(() => {
-        fetch('/students')
-        .then(resp => resp.json())
-        .then(setStudents)
-    }, [])
+    // useEffect(() => {
+    //     fetch('/students')
+    //     .then(resp => resp.json())
+    //     .then(setStudents)
+    // }, [])
 
     const loginStudent = (student) => {
         setStudents(student);
