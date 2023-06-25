@@ -18,19 +18,9 @@ function CourseList() {
         setStudents({ ...students.courses, newClass})
     }
 
-    // rendering all courses
-    // const renderCourse = courses.map(course => {
-    //     return (
-    //         <CourseCard 
-    //             key={ course.id }
-    //             course={ course }
-    //             onAddClass={onAddClass}
-    //         />
-    //     )
-    // })
-
     return (
         <div className="card-div">
+            <h3>REGISTER FOR CLASS</h3>
             <table>
                 <tr>
                     <th>Class</th>
@@ -41,7 +31,7 @@ function CourseList() {
                     <tr key={ course.id }>
                         <td>{ course.name }</td>
                         <td>{ course.teacher }</td>
-                        <td><button>Add Class</button></td>
+                        <td><button className="course-btn">Add Class</button></td>
                     </tr>
                 ))}
             </table>

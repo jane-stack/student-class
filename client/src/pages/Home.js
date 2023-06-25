@@ -1,19 +1,28 @@
 import { useContext } from "react";
 import { StudentContext } from "../context/StudentContext";
-import StudentCourse from "../components/StudentCourse";
+
 
 function Home() {
     const { students } = useContext(StudentContext);
-    const student = students.courses.map(student => <StudentCourse key={student.id} student={student} />)
 
     return (
-        <div>
-            <h1 className="App">Welcome { students.first_name }!</h1>
-            <h5>You are visiting Tuyen's phase four StudentAccount project</h5>
-            <div className="home-page">
-            <h2>My Clases:</h2>
-            { student }
-            </div>
+        <div className="card-div">
+            <h1>Welcome { students.first_name }</h1>
+            <h5>Here are all your registered classes</h5>
+            <table>
+                <tr>
+                    <th>Class</th>
+                    <th>Teacher</th>
+                    <th>Register</th>
+                </tr>
+                {students.courses.map(student => (
+                    <tr key={ student.id }>
+                        <td>{ student.name }</td>
+                        <td>{ student.teacher }</td>
+                        <td><button className="course-btn">Remove</button></td>
+                    </tr>
+                ))}
+            </table>
         </div>
     )
 }

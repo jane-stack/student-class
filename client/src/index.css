@@ -99,3 +99,9 @@ th {
 td {
   text-align: center;
 }
+
+.course-btn {
+  background: none;
+  border: solid;
+  color: white;
+}
