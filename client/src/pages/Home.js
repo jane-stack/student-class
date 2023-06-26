@@ -3,11 +3,11 @@ import { StudentContext } from "../context/StudentContext";
 
 
 function Home() {
-    const { students } = useContext(StudentContext);
+    const { student } = useContext(StudentContext);
 
     return (
         <div className="card-div">
-            <h1>Welcome { students.first_name }</h1>
+            <h1>Welcome { student.first_name }</h1>
             <h5>Here are all your registered classes</h5>
             <table>
                 <tr>
@@ -15,11 +15,11 @@ function Home() {
                     <th>Teacher</th>
                     <th>Register</th>
                 </tr>
-                {students.courses.map(student => (
+                {student.courses.map(student => (
                     <tr key={ student.id }>
                         <td>{ student.name }</td>
                         <td>{ student.teacher }</td>
-                        <td><button className="course-btn">Remove</button></td>
+                        <td><button className="course-btn">Unregister</button></td>
                     </tr>
                 ))}
             </table>

@@ -105,3 +105,19 @@ td {
   border: solid;
   color: white;
 }
+
+.post-form {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.new-post {
+  padding: 200px;
+}
+
+.post-input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}

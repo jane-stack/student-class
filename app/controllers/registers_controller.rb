@@ -1,7 +1,11 @@
 class RegistersController < ApplicationController
-    before_action :find_student
-    before_action :find_course
+    before_action :find_student, only: [:create]
+    before_action :find_course, only: [:create]
     before_action :find_registration, only: [:destroy]
+
+    def index
+        render json: Register.all
+    end
 
     def create
         @register = @student.courses << @course

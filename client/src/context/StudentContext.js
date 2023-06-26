@@ -3,7 +3,8 @@ import { createContext, useEffect, useState } from "react";
 const StudentContext = createContext({});
 
 const StudentProvider = ({ children }) => {
-    const [ students, setStudents ] = useState([]);
+    const [ student, setStudent ] = useState([]);
+    const [ studentList, setStudentList ] = useState([]);
     const [ loggedIn, setLoggedIn ] = useState(false);
     const [ currentUser, setCurrentUser ] = useState(null);
 
@@ -12,38 +13,40 @@ const StudentProvider = ({ children }) => {
         .then(resp => {
             if (resp.ok) {
                 resp.json().then(data => {
-                    setStudents(data)
+                    setStudent(data)
                     data.error ? setLoggedIn(false) : setLoggedIn(true)
                 })
             }
         })
     }, [])
 
-    // useEffect(() => {
-    //     fetch('/students')
-    //     .then(resp => resp.json())
-    //     .then(setStudents)
-    // }, [])
+    useEffect(() => {
+        fetch('/students')
+        .then(resp => resp.json())
+        .then(data => {
+            setStudentList(data)
+        })
+    }, [])
 
     const loginStudent = (student) => {
-        setStudents(student);
+        setStudent(student);
         setCurrentUser(student);
         setLoggedIn(true);
     }
 
     const logoutStudent = () => {
-        setStudents({});
+        setStudent({});
         setCurrentUser(null);
         setLoggedIn(false);
     }
 
     const addStudent = (student) => {
-        setStudents(student);
+        setStudent(student);
         setLoggedIn(true);
     }
 
     return (
-        <StudentContext.Provider value={{ students, loggedIn, currentUser, loginStudent, logoutStudent, addStudent  }}>{ children }</StudentContext.Provider>
+        <StudentContext.Provider value={{ student, loggedIn, currentUser, loginStudent, logoutStudent, addStudent, studentList, setStudentList  }}>{ children }</StudentContext.Provider>
     )
 }
 

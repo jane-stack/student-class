@@ -1,22 +1,5 @@
-import { useState, useEffect, useContext } from "react";
-// import CourseCard from "../components/CourseCard";
-import { StudentContext } from "../context/StudentContext";
+function CourseList({ courses }) {
 
-function CourseList() {
-    const { students, setStudents } = useContext(StudentContext);
-    const [ courses, setCourses ] = useState([]);
-
-
-    useEffect(() => {
-        fetch('/courses')
-        .then(resp => resp.json())
-        .then(courses => setCourses(courses))
-    }, [])
-
-    // handle add course
-    const onAddClass = (newClass) => {
-        setStudents({ ...students.courses, newClass})
-    }
 
     return (
         <div className="card-div">
@@ -31,7 +14,7 @@ function CourseList() {
                     <tr key={ course.id }>
                         <td>{ course.name }</td>
                         <td>{ course.teacher }</td>
-                        <td><button className="course-btn">Add Class</button></td>
+                        <td><button className="course-btn">Register</button></td>
                     </tr>
                 ))}
             </table>
