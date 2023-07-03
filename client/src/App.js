@@ -38,7 +38,8 @@ function App() {
     <Navbar />
       <div className="App">
         <Switch>
-          <Route path="/students/:id/registers"><StudentDetail students={students} selectedStudent={selectedStudent} /></Route>
+          <Route path="/students/:id/registers"><StudentDetail students={students} selectedStudent={selectedStudent} courses={courses} /></Route>
+          {/* <Route path="/home"><Home /></Route> */}
           <Route path="/home"><CourseList courses={courses} students={students} handleClick={handleClick} /></Route>
           <Route path="/settings"><Setting /></Route>
           <Route path="/"><LoginPage /></Route>
