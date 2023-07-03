@@ -18,7 +18,7 @@ code {
   background-color: #282c34;
   /* min-height: 100vh; */
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   /* align-items: center; */
   justify-content: center;
   color: white;
@@ -87,17 +87,24 @@ code {
   align-items: center;
 }
 
-table {
-  width: 500px;
-  height: 200px;
+thead {
+  width: 200px;
+  height: 50px;
+}
+
+tbody {
+  width: 200px;
+  height: 50px;
 }
 
 th {
   border: 1px solid white;
+  width: 200px;
 }
 
 td {
   text-align: center;
+  width: 200px;
 }
 
 .course-btn {
@@ -120,4 +127,9 @@ td {
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }

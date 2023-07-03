@@ -9,10 +9,10 @@ Rails.application.routes.draw do
   # resources :registers, only: [:destroy]
 
   resources :students do
-    resources :registers, only: [:destroy]
+    resources :registers, only: [:index, :create, :destroy]
   end
   resources :courses, only: [:index, :create, :destroy]
-  resources :registers, only: [:index, :create]
+  resources :registers, only: [:create]
 
   # Students
   post '/signup', to: 'students#create'

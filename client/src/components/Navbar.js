@@ -21,7 +21,7 @@ function Navbar() {
         return (
             <>
             <NavLink to="/home" className="nav-link">Home</NavLink>
-            <NavLink to="/courses" className="nav-link">Courses</NavLink>
+            {/* <NavLink to="/courses" className="nav-link">Courses</NavLink> */}
             <NavLink to="/settings" className="nav-link">Setting</NavLink>
             <NavLink to="#" className="nav-link" onClick={logoutUser}>Logout</NavLink>
             </>
